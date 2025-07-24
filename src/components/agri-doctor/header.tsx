@@ -2,7 +2,7 @@
 
 import { Leaf, History, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useHistory } from "@/hooks/use-history.tsx";
+import { useHistory } from "@/hooks/use-history";
 import { useSidebar } from "@/components/ui/sidebar";
 
 export function Header() {
