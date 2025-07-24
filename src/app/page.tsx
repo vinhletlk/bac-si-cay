@@ -10,16 +10,16 @@ export default function Home() {
     <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
       <HistoryDrawer>
         <Header />
-        <main className="container mx-auto px-4 py-8 md:py-12 flex-grow w-full">
-          <div className="grid gap-12 md:gap-24">
+        <main className="container mx-auto px-4 py-6 md:py-12 flex-grow w-full">
+          <div className="grid gap-16">
             <DiagnosisTabs />
             <PestForecast />
             <DiseaseCarousel />
             <MedicationList />
           </div>
         </main>
-        <footer className="w-full p-6 bg-background border-t">
-          <div className="container mx-auto text-center text-muted-foreground text-xs md:text-sm">
+        <footer className="w-full p-4 bg-background border-t">
+          <div className="container mx-auto text-center text-muted-foreground text-xs">
             <p>&copy; {new Date().getFullYear()} AgriDoctor. Đối tác AI của bạn trong việc chăm sóc cây trồng.</p>
           </div>
         </footer>
