@@ -4,19 +4,16 @@ import { DiseaseCarousel } from "@/components/agri-doctor/disease-carousel";
 import { MedicationList } from "@/components/agri-doctor/medication-list";
 import { HistoryDrawer } from "@/components/agri-doctor/history-drawer";
 import { PestForecast } from "@/components/agri-doctor/pest-forecast";
-import { SidebarProvider, Sidebar, SidebarInset, SidebarTrigger, SidebarContent, SidebarHeader } from "@/components/ui/sidebar";
+import { SidebarProvider, Sidebar, SidebarInset, SidebarContent, SidebarHeader } from "@/components/ui/sidebar";
 import { SidebarNav } from "@/components/agri-doctor/sidebar-nav";
 
 export default function Home() {
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <Sidebar>
         <SidebarContent>
           <SidebarHeader>
-            <div className="flex items-center gap-2">
-                <SidebarTrigger className="md:hidden" />
-                <h2 className="font-semibold text-lg">Menu</h2>
-            </div>
+            <h2 className="font-semibold text-lg">Menu</h2>
           </SidebarHeader>
           <SidebarNav />
         </SidebarContent>
@@ -25,8 +22,8 @@ export default function Home() {
         <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
           <HistoryDrawer>
             <Header />
-            <main className="container mx-auto px-4 py-6 md:py-12 flex-grow w-full">
-              <div className="grid gap-12 md:gap-16">
+            <main className="container mx-auto px-4 py-8 md:py-12 flex-grow w-full">
+              <div className="grid gap-16 md:gap-24">
                 <div id="diagnosis">
                   <DiagnosisTabs />
                 </div>

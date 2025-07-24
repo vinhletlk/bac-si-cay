@@ -13,9 +13,9 @@ export function Header() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <SidebarTrigger className="hidden md:flex text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground -ml-2" />
-              <Leaf className="h-7 w-7 md:h-8 md:w-8" />
-              <h1 className="text-2xl md:text-3xl font-bold font-headline tracking-tight">
+              <SidebarTrigger className="text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground -ml-2" />
+              <Leaf className="h-6 w-6 md:h-7 md:w-7" />
+              <h1 className="text-xl md:text-2xl font-bold font-headline tracking-tight">
                   Bác sĩ Nông nghiệp
               </h1>
             </div>
