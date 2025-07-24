@@ -205,8 +205,8 @@ export function DiagnosisTabs() {
         </div>
       </div>
       <div className="flex flex-col sm:flex-row sm:justify-end gap-2">
-          <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading} className="sm:w-auto w-full" size="lg">Xóa</Button>
-          <Button type="submit" variant="accent" disabled={isLoading || !imageFile} className="sm:w-auto w-full" size="lg">
+          <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading} className="w-full sm:w-auto" size="lg">Xóa</Button>
+          <Button type="submit" variant="accent" disabled={isLoading || !imageFile} className="w-full sm:w-auto" size="lg">
             {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4"/>}
             Nhận kết quả
           </Button>
@@ -235,8 +235,8 @@ export function DiagnosisTabs() {
                 className="bg-card"
               />
               <div className="flex flex-col sm:flex-row sm:justify-end gap-2">
-                  <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading} className="sm:w-auto w-full" size="lg">Xóa</Button>
-                  <Button type="submit" variant="accent" disabled={isLoading || !symptoms.trim()} className="sm:w-auto w-full" size="lg">
+                  <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading} className="w-full sm:w-auto" size="lg">Xóa</Button>
+                  <Button type="submit" variant="accent" disabled={isLoading || !symptoms.trim()} className="w-full sm:w-auto" size="lg">
                     {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4"/>}
                     Nhận chẩn đoán
                   </Button>

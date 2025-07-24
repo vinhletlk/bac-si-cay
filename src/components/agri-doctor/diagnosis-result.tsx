@@ -91,13 +91,11 @@ const InstructionAccordion = ({ instructions }: { instructions: string }) => {
       <Accordion type="single" collapsible className="w-full mt-4">
           <AccordionItem value="instructions" className="border-b-0">
               <AccordionTrigger asChild>
-                  <Button variant="outline" className="w-full data-[state=open]:bg-muted/50">
-                      <div className="flex items-center justify-center gap-2">
-                          <BookOpen className="h-4 w-4" />
-                          <span className="group-data-[state=closed]:block group-data-[state=open]:hidden">Xem hướng dẫn</span>
-                          <span className="group-data-[state=closed]:hidden group-data-[state=open]:block">Ẩn hướng dẫn</span>
-                          <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                      </div>
+                  <Button variant="outline" className="w-full group">
+                      <BookOpen className="h-4 w-4 mr-2" />
+                      <span className="group-data-[state=closed]:inline group-data-[state=open]:hidden">Xem hướng dẫn</span>
+                      <span className="group-data-[state=closed]:hidden group-data-[state=open]:inline">Ẩn hướng dẫn</span>
+                      <ChevronDown className="h-4 w-4 ml-auto transition-transform duration-200 group-data-[state=open]:rotate-180" />
                   </Button>
               </AccordionTrigger>
               <AccordionContent>

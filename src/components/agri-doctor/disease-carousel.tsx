@@ -57,7 +57,7 @@ export function DiseaseCarousel() {
       >
         <CarouselContent>
           {diseases.map((disease, index) => (
-            <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/3">
+            <CarouselItem key={index} className="basis-full sm:basis-1/2 md:basis-1/3">
               <div className="p-1">
                 <Card className="overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
                     <Image
