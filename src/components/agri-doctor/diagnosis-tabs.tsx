@@ -185,13 +185,13 @@ export function DiagnosisTabs() {
             <Input id={inputId} type="file" accept="image/*" onChange={handleFileChange} className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" />
             <div className="flex flex-col items-center justify-center p-6 border-2 border-dashed rounded-lg border-muted bg-card hover:bg-muted/50 transition-colors">
                 {imagePreview ? (
-                    <div className="p-2 bg-white rounded-lg shadow-inner">
+                    <div className="p-2 bg-white rounded-lg shadow-inner w-full">
                         <Image
                             src={imagePreview}
                             alt="Xem trước"
                             width={200}
                             height={200}
-                            className="mx-auto rounded-md object-contain max-h-40 md:max-h-52"
+                            className="w-full rounded-md object-contain max-h-40 md:max-h-52"
                         />
                     </div>
                 ) : (
@@ -204,9 +204,9 @@ export function DiagnosisTabs() {
             </div>
         </div>
       </div>
-      <div className="flex justify-end gap-2">
-          <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading}>Xóa</Button>
-          <Button type="submit" variant="accent" disabled={isLoading || !imageFile}>
+      <div className="flex flex-col sm:flex-row sm:justify-end gap-2">
+          <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading} className="sm:w-auto w-full" size="lg">Xóa</Button>
+          <Button type="submit" variant="accent" disabled={isLoading || !imageFile} className="sm:w-auto w-full" size="lg">
             {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4"/>}
             Nhận kết quả
           </Button>
@@ -234,9 +234,9 @@ export function DiagnosisTabs() {
                 rows={6}
                 className="bg-card"
               />
-              <div className="flex justify-end gap-2">
-                  <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading}>Xóa</Button>
-                  <Button type="submit" variant="accent" disabled={isLoading || !symptoms.trim()}>
+              <div className="flex flex-col sm:flex-row sm:justify-end gap-2">
+                  <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading} className="sm:w-auto w-full" size="lg">Xóa</Button>
+                  <Button type="submit" variant="accent" disabled={isLoading || !symptoms.trim()} className="sm:w-auto w-full" size="lg">
                     {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4"/>}
                     Nhận chẩn đoán
                   </Button>
@@ -336,5 +336,3 @@ export function DiagnosisTabs() {
     </section>
   );
 }
-
-    

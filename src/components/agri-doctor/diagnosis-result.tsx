@@ -90,16 +90,18 @@ const InstructionAccordion = ({ instructions }: { instructions: string }) => {
   return (
       <Accordion type="single" collapsible className="w-full mt-4">
           <AccordionItem value="instructions" className="border-b-0">
-              <AccordionTrigger className="group text-sm font-semibold hover:no-underline p-2.5 rounded-md bg-white dark:bg-card hover:bg-muted/50 border justify-center transition-all">
-                  <div className="flex items-center justify-center gap-2">
-                      <BookOpen className="h-4 w-4" />
-                      <span className="group-data-[state=closed]:block group-data-[state=open]:hidden">Xem hướng dẫn</span>
-                      <span className="group-data-[state=closed]:hidden group-data-[state=open]:block">Ẩn hướng dẫn</span>
-                      <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-                  </div>
+              <AccordionTrigger asChild>
+                  <Button variant="outline" className="w-full data-[state=open]:bg-muted/50">
+                      <div className="flex items-center justify-center gap-2">
+                          <BookOpen className="h-4 w-4" />
+                          <span className="group-data-[state=closed]:block group-data-[state=open]:hidden">Xem hướng dẫn</span>
+                          <span className="group-data-[state=closed]:hidden group-data-[state=open]:block">Ẩn hướng dẫn</span>
+                          <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                      </div>
+                  </Button>
               </AccordionTrigger>
               <AccordionContent>
-                  <p className="text-muted-foreground whitespace-pre-wrap prose prose-sm max-w-none pt-4">{instructions}</p>
+                  <div className="text-muted-foreground whitespace-pre-wrap prose prose-sm max-w-none pt-4">{instructions}</div>
               </AccordionContent>
           </AccordionItem>
       </Accordion>
@@ -179,7 +181,7 @@ export function DiagnosisResult({ result, type }: DiagnosisResultProps) {
               </div>
           </CardContent>
           <CardFooter className="bg-muted/50 p-4 flex justify-end">
-              <Button onClick={handlePurchase} className="w-full sm:w-auto">
+              <Button onClick={handlePurchase} className="w-full sm:w-auto" size="lg">
               <ShoppingCart className="mr-2 h-4 w-4" />
               Mua sản phẩm
               </Button>
@@ -319,7 +321,7 @@ export function DiagnosisResult({ result, type }: DiagnosisResultProps) {
         )}
       </CardContent>
       <CardFooter className="bg-muted/50 p-4 flex justify-end">
-        <Button onClick={handlePurchase} className="w-full sm:w-auto">
+        <Button onClick={handlePurchase} className="w-full sm:w-auto" size="lg">
           <ShoppingCart className="mr-2 h-4 w-4" />
           Mua đơn thuốc
         </Button>
@@ -327,5 +329,3 @@ export function DiagnosisResult({ result, type }: DiagnosisResultProps) {
     </Card>
   );
 }
-
-    
