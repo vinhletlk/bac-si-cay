@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { DiagnosisResult } from "./diagnosis-result";
-import { Loader2, Image as ImageIcon, Stethoscope, Bug, UploadCloud } from "lucide-react";
+import { Loader2, Image as ImageIcon, Stethoscope, Bug, UploadCloud, Sparkles } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 import { useHistory, HistoryItem } from "@/hooks/use-history.tsx";
@@ -191,7 +191,7 @@ export function DiagnosisTabs() {
                             alt="Xem trước"
                             width={200}
                             height={200}
-                            className="mx-auto rounded-md object-contain max-h-40 md:max-h-64"
+                            className="mx-auto rounded-md object-contain max-h-40 md:max-h-52"
                         />
                     </div>
                 ) : (
@@ -206,8 +206,8 @@ export function DiagnosisTabs() {
       </div>
       <div className="flex justify-end gap-2">
           <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading}>Xóa</Button>
-          <Button type="submit" disabled={isLoading || !imageFile}>
-            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          <Button type="submit" variant="accent" disabled={isLoading || !imageFile}>
+            {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4"/>}
             Nhận kết quả
           </Button>
       </div>
@@ -236,8 +236,8 @@ export function DiagnosisTabs() {
               />
               <div className="flex justify-end gap-2">
                   <Button type="button" variant="ghost" onClick={() => clearForm()} disabled={isLoading}>Xóa</Button>
-                  <Button type="submit" disabled={isLoading || !symptoms.trim()}>
-                    {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  <Button type="submit" variant="accent" disabled={isLoading || !symptoms.trim()}>
+                    {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Sparkles className="mr-2 h-4 w-4"/>}
                     Nhận chẩn đoán
                   </Button>
               </div>
