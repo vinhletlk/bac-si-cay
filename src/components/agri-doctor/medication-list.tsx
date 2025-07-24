@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -49,7 +50,7 @@ export function MedicationList() {
       <p className="text-muted-foreground text-center text-sm md:text-base mb-8 max-w-2xl mx-auto">
         Khám phá các phương pháp điều trị hiệu quả. Luôn đọc kỹ nhãn và hướng dẫn sử dụng.
       </p>
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {medications.map((med, index) => (
           <Card key={index} className="overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <Image
@@ -60,10 +61,10 @@ export function MedicationList() {
               data-ai-hint={med.hint}
               className="aspect-[3/2] object-cover w-full"
             />
-            <CardHeader className="p-3 md:p-6 pb-0">
+            <CardHeader className="p-4 md:p-6 pb-0">
                 <CardTitle className="text-base md:text-xl truncate">{med.name}</CardTitle>
             </CardHeader>
-            <CardContent className="p-3 md:p-6">
+            <CardContent className="p-4 md:p-6 pt-2">
               <CardDescription className="text-xs md:text-sm h-12">{med.usage}</CardDescription>
             </CardContent>
           </Card>
@@ -72,3 +73,5 @@ export function MedicationList() {
     </section>
   );
 }
+
+    

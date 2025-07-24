@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -190,7 +191,7 @@ export function DiagnosisTabs() {
                             alt="Xem trước"
                             width={200}
                             height={200}
-                            className="mx-auto rounded-md object-contain max-h-48 md:max-h-64"
+                            className="mx-auto rounded-md object-contain max-h-40 md:max-h-64"
                         />
                     </div>
                 ) : (
@@ -335,3 +336,5 @@ export function DiagnosisTabs() {
     </section>
   );
 }
+
+    

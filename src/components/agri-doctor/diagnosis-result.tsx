@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -10,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ClipboardList, FlaskConical, Pill, ShoppingCart, Bug, Leaf, AlertTriangle, Search, Microscope, FlaskRound, BookOpen, Lightbulb, ShieldAlert, ChevronDown, ChevronUp } from "lucide-react";
+import { ClipboardList, FlaskConical, Pill, ShoppingCart, Bug, Leaf, AlertTriangle, Search, Microscope, FlaskRound, BookOpen, Lightbulb, ShieldAlert, ChevronDown } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
 
@@ -76,9 +77,9 @@ const SuggestedMedications = ({ medications }: { medications: Medication[] }) =>
     return (
         <div className="space-y-3">
             {(medications || []).map(med => (
-                <div key={med.name} className="p-2 border-l-2 border-primary/50 bg-primary/5 rounded-r-md">
+                <div key={med.name} className="p-3 border-l-4 border-primary/50 bg-primary/5 rounded-r-md">
                     <p className="font-semibold text-primary">{med.name}</p>
-                    <p className="text-xs text-muted-foreground italic">“{med.reason}”</p>
+                    <p className="text-sm text-muted-foreground italic">“{med.reason}”</p>
                 </div>
             ))}
         </div>
@@ -89,7 +90,7 @@ const InstructionAccordion = ({ instructions }: { instructions: string }) => {
   return (
       <Accordion type="single" collapsible className="w-full mt-4">
           <AccordionItem value="instructions" className="border-b-0">
-              <AccordionTrigger className="group text-sm font-semibold hover:no-underline p-2 rounded-md bg-white dark:bg-card hover:bg-muted/50 border justify-center">
+              <AccordionTrigger className="group text-sm font-semibold hover:no-underline p-2.5 rounded-md bg-white dark:bg-card hover:bg-muted/50 border justify-center transition-all">
                   <div className="flex items-center justify-center gap-2">
                       <BookOpen className="h-4 w-4" />
                       <span className="group-data-[state=closed]:block group-data-[state=open]:hidden">Xem hướng dẫn</span>
@@ -225,7 +226,7 @@ export function DiagnosisResult({ result, type }: DiagnosisResultProps) {
   return (
     <Card className="shadow-lg animate-in fade-in-50">
       <CardHeader>
-        <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-4">
           <div>
             <CardTitle className="text-xl md:text-2xl font-headline flex items-center gap-2">
               <ClipboardList /> Báo cáo chẩn đoán
@@ -247,7 +248,7 @@ export function DiagnosisResult({ result, type }: DiagnosisResultProps) {
           <p className="text-xl text-primary font-bold">{diagnosisText}</p>
         </div>
 
-        {severityScore !== undefined && (
+        {typeof severityScore !== 'undefined' && (
              <SeverityProgress value={severityScore} />
         )}
 
@@ -326,3 +327,5 @@ export function DiagnosisResult({ result, type }: DiagnosisResultProps) {
     </Card>
   );
 }
+
+    
