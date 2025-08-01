@@ -3,13 +3,6 @@ import withPWAInit from "next-pwa";
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-const withPWA = withPWAInit({
-  dest: "public",
-  disable: isDevelopment,
-  register: true,
-  skipWaiting: true,
-});
-
 const nextConfig: NextConfig = {
   /* config options here */
   typescript: {
@@ -35,5 +28,12 @@ const nextConfig: NextConfig = {
     ],
   },
 };
+
+const withPWA = withPWAInit({
+  dest: "public",
+  disable: isDevelopment,
+  register: true,
+  skipWaiting: true,
+});
 
 export default withPWA(nextConfig);
