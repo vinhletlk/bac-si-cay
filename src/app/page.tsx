@@ -9,6 +9,7 @@ import { SidebarNav } from "@/components/agri-doctor/sidebar-nav";
 import { Button } from "@/components/ui/button";
 import { History } from "lucide-react";
 import { HistoryProvider } from "@/hooks/use-history";
+import { SidebarDrawer } from "@/components/agri-doctor/sidebar-drawer";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <SidebarInset>
           <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
             <Header />
+            <SidebarDrawer />
             <main className="container mx-auto px-4 py-8 md:py-12 flex-grow w-full">
               <div className="grid gap-16 md:gap-24">
                 <div id="diagnosis">

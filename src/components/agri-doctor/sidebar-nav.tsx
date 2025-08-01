@@ -31,7 +31,7 @@ export function SidebarNav() {
     };
 
     return (
-        <div className="flex-1 overflow-y-auto">
+        <div className="hidden md:block flex-1 overflow-y-auto">
             <nav className="p-2">
                 <ul className="space-y-1">
                     {navItems.map((item) => {
