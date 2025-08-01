@@ -35,7 +35,7 @@ export default function Home() {
           <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
             <Header />
             <SidebarDrawer />
-            <main className="container mx-auto px-4 py-8 md:py-12 flex-grow w-full">
+            <main className="w-full px-2 py-4 md:py-12 flex-grow">
               <div className="grid gap-16 md:gap-24">
                 <div id="diagnosis">
                   <DiagnosisTabs />
